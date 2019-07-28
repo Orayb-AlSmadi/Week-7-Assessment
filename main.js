@@ -5,9 +5,9 @@ console.log('GOOD LUCK 👩‍💻 👨‍💻')
 Usind Map
 Create a function called MultiByNum1OrNum2
 that takes an array of numbers and two numbers as a parameter
-and return a new array after mutiple each elemnt to the num1
-if the module of this elemnt to num1 is 0
-otherwise multiple the elemt to num2
+and return a new array after multiple each element to the num1
+if the module of this element to num1 is 0
+otherwise multiple the element to num2
 
 var arrOfNum1 = [1,5,2]
 Example: 
@@ -23,8 +23,15 @@ Output =>
 
 */
 
-function MultiByNum1OrNum2() {
-  // WRITE YOUR CODE UNDER THIS LINE         
+function MultiByNum1OrNum2(arr, num1, num2) {
+  // WRITE YOUR CODE UNDER THIS LINE     
+  var array = arr.map(x => {
+    if (x % num1 === 0)
+      return x * num1;
+    else
+      return x * num2;
+  })
+  return array;
 }
 
 /* Q2:
@@ -58,8 +65,17 @@ Output =>
 ]
 */
 
-function longerAndYounger() {
-  // WRITE YOUR CODE UNDER THIS LINE         
+function longerAndYounger(arr, num1, num2) {
+  // WRITE YOUR CODE UNDER THIS LINE  
+
+  var array = arr.filter(x => {
+    var a = x.name;
+    var b = x.age;
+    if (a.length > num1 && b < num2)
+      return x;
+  })
+
+  return array;
 }
 
 /* Q3:
@@ -89,8 +105,16 @@ Output =>
 "alice, fried chiken, pizaa, burger, hot dog, eggs"
   
 */
-function nameAndAllFoods() {
-  // WRITE YOUR CODE UNDER THIS LINE         
+function nameAndAllFoods(arr, num) {
+  // WRITE YOUR CODE UNDER THIS LINE 
+  var e = arr[num].name;
+
+  var output = arr.reduce((acc, x) => {
+    return acc = acc + ", " + x.food;
+
+  }, e)
+
+  return output
 }
 
 

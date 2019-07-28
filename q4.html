@@ -3,10 +3,21 @@
 
 <head>
 	<!-- WRITE YOUR CODE UNDER THIS LINE          -->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<title> q4 </title>
 </head>
 
 <body>
 	<!-- WRITE YOUR CODE UNDER THIS LINE          -->
+	<div class="main"> Main div is here </div>
+
+	<button id="no" type="button" style="background-color: red "> Red </button>
+	<button id="yes" type="button" style="background-color: green "> Green </button>
+
+	<script>
+		$("#no").click(function () { $(".main").css("background-color", "red"); })
+		$("#yes").click(function () { $(".main").css("background-color", "green"); }) 
+	</script>
 </body>
 
 </html>
